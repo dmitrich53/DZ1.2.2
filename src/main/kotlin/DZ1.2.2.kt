@@ -2,8 +2,7 @@ fun main() {
     while (true) {
         println("Введите количество положительных likes.")
         val likes = readLine()
-        val numberLength = likes?.count()
-        val discardingPositions = likes?.removeRange(0, numberLength?.minus(1) ?: 0)
+        val discardingPositions = likes?.takeLast(1)
         if (discardingPositions != "1") {
             println("Понравилось $likes людям.")
         } else {
